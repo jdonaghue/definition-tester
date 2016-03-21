@@ -18,6 +18,9 @@ optimist.boolean('single-thread');
 optimist.boolean('changes');
 optimist.default('changes', false);
 
+optimist.string('git-remote');
+optimist.default('git-remote', 'origin');
+
 optimist.boolean('dry');
 optimist.default('dry', false);
 
@@ -91,6 +94,7 @@ new TestRunner({
 	tslintConfig: path.join(path.dirname(testerPkgPath), 'conf', 'tslint.json'),
 
 	changes: (testFull ? false : argv['changes']),
+	gitRemote: argv['git-remote'],
 	tests: argv['dry'] ? false : argv['tests'],
 	lint: argv['dry'] ? false : argv['lint'],
 	headers: argv['dry'] ? false : argv['headers'],

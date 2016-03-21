@@ -46,7 +46,7 @@ export default class TestRunner {
 		this.options = options;
 
 		this.index = new FileIndex(this.options);
-		this.changes = new GitChanges(this.options.dtPath);
+		this.changes = new GitChanges(this.options.dtPath, this.options.gitRemote);
 
 		let tscVersion = 'unknown';
 		try {

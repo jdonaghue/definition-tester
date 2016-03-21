@@ -6,6 +6,7 @@ export interface ITestOptions {
 	tslintConfig: string;
 
 	changes: boolean;
+	gitRemote: string;
 	tests: boolean;
 	lint: boolean;
 	headers: boolean;

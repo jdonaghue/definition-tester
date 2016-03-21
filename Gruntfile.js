@@ -73,6 +73,9 @@ module.exports = function (grunt) {
 			if (options.changes) {
 				args.push('--changes');
 			}
+			if (options.gitRemote) {
+				args.push('--git-remote', options.gitRemote);
+			}
 			if (options.debug) {
 				args.push('--debug');
 			}
